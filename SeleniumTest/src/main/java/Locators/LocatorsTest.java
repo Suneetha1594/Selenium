@@ -5,6 +5,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
 
 public class LocatorsTest {
 
@@ -51,7 +52,25 @@ public class LocatorsTest {
 		System.out.println("Radiobutton1 is Displayed or not(true/false): "+ isDisplayed);
 
 		driver.findElement(By.xpath("//input[@id=\"my-radio-2\"]")).click();
-
+		
+		WebElement dropdown = driver.findElement(By.name("my-select"));
+		Select select = new Select(dropdown);
+		System.out.println(select.getOptions().size());
+		select.selectByVisibleText("One");
+		
+		WebElement uploadfile = driver.findElement(By.name("my-file"));
+		uploadfile.sendKeys("C:\\Users\\Administrator\\Pictures\\Capture.Png");
+		
+		String fileName = uploadfile.getAttribute("value");
+		
+		if(fileName.contains("Capture.Png"))
+		{
+			System.out.println("File got uploaded successfully" + fileName);
+		}
+		else
+		{
+			System.out.println("File not uploaded successfully" + fileName);
+		}
 		//driver.findElement(By.linkText("Return to index")).click();
 
 
