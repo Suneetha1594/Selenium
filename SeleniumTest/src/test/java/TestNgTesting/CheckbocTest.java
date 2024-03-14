@@ -6,8 +6,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
+import Utlities.Screenshot;
 
 public class CheckbocTest {
      WebDriver driver;
@@ -43,6 +46,11 @@ public class CheckbocTest {
     	 //Assert.assertTrue(checkbox.isSelected());
     	 Assert.assertFalse(checkbox.isSelected());
      }
+
+		/*
+		 * @AfterMethod public void screenshottest() {
+		 * Screenshot.CaptureScreenshot(driver, "checkboxtesting"); }
+		 */
      @AfterClass
      public void teardown() 
      {
