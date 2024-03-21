@@ -13,7 +13,7 @@ public class ExcelFileTest {
 	@DataProvider(name="test1")
 	public Object[][] CreateData1() throws IOException {
 		ReadExcelSheetExample read = new ReadExcelSheetExample();
-		Object[][] data = read.readexceldata();
+		Object[][] data = read.readexceldata("./Data1.xlsx","Sheet1");
 		return data;		
 	}
    @Test(dataProvider ="test1")

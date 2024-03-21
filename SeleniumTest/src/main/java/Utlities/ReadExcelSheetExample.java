@@ -10,9 +10,9 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ReadExcelSheetExample {
-	public Object[][] readexceldata() throws IOException {
-		String filepath = "./Data1.xlsx";
-		String Sheetname= "Sheet1";
+	public Object[][] readexceldata(String filepath,String Sheetname) throws IOException {
+		//String filepath = "./Data1.xlsx";
+		//String Sheetname= "Sheet1";
 		File src = new File(filepath);
 		FileInputStream fis = new FileInputStream(src);
 		XSSFWorkbook wb1 = new XSSFWorkbook(fis);
