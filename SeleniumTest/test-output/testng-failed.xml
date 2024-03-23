@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestNgTesting.CsvFileTest">
+      <class name="TestNgTesting.RemoteTest">
         <methods>
-          <include name="testcase1"/>
+          <include name="remotetest"/>
         </methods>
-      </class> <!-- TestNgTesting.CsvFileTest -->
+      </class> <!-- TestNgTesting.RemoteTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
